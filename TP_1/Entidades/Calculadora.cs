@@ -30,10 +30,10 @@ namespace Entidades
 
         private static string ValidarOperador(string operador)
         {
-            if (operador.Equals("+") || operador.Equals("-") || operador.Equals("*"))
+            if (operador.Equals("+") || operador.Equals("-") || operador.Equals("*") || operador.Equals("/"))
                 return operador;
 
-            return "/";
+            return "+";
         }
         #endregion
     }
