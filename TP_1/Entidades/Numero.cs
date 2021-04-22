@@ -122,7 +122,7 @@ namespace Entidades
             }
             else
             {
-                resultado = "Valor invalido";
+                resultado = "Valor inválido";
             }
 
             return resultado;
