@@ -60,13 +60,16 @@ namespace Entidades
                 switch (tipo)
                 {
                     case ETipo.Ciclomotor:
-                        sb.AppendLine(v.Mostrar());
+                        if (v is Ciclomotor)
+                            sb.AppendLine(v.Mostrar());
                         break;
                     case ETipo.Sedan:
-                        sb.AppendLine(v.Mostrar());
+                        if (v is Sedan)
+                            sb.AppendLine(v.Mostrar());
                         break;
                     case ETipo.SUV:
-                        sb.AppendLine(v.Mostrar());
+                        if (v is Suv)
+                            sb.AppendLine(v.Mostrar());
                         break;
                     default:
                         sb.AppendLine(v.Mostrar());
@@ -87,16 +90,16 @@ namespace Entidades
         /// <returns></returns>
         public static Taller operator +(Taller t, Vehiculo vehiculo)
         {
+
+            foreach (Vehiculo v in t.vehiculos)
+            {
+                if (v == vehiculo)
+                    return t;
+            }
+
             if (t.vehiculos.Count < t.espacioDisponible)
             {
-                foreach (Vehiculo v in t.vehiculos)
-                {
-                    if (v == vehiculo)
-                        return t;
-                }
-
                 t.vehiculos.Add(vehiculo);
-                return t;
             }
 
             return t;

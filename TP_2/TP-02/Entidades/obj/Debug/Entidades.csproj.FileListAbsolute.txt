@@ -17,3 +17,9 @@ C:\Users\yamil\Desktop\Facultad\Programacion-Laboratorio_2\TPs\TP_2\TP-02\Entida
 C:\Users\yamil\Desktop\Facultad\Programacion-Laboratorio_2\TPs\TP_2\TP-02\Entidades\obj\Debug\Entidades.pdb
 C:\Users\yamil\Desktop\Facultad\Programacion-Laboratorio_2\TPs\TP_2\TP-02\Entidades\bin\Debug\Entidades.dll
 C:\Users\yamil\Desktop\Facultad\Programacion-Laboratorio_2\TPs\TP_2\TP-02\Entidades\bin\Debug\Entidades.pdb
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_2\TP-02\Entidades\bin\Debug\Entidades.dll
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_2\TP-02\Entidades\bin\Debug\Entidades.pdb
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_2\TP-02\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_2\TP-02\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_2\TP-02\Entidades\obj\Debug\Entidades.dll
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_2\TP-02\Entidades\obj\Debug\Entidades.pdb

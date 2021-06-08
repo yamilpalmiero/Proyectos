@@ -17,7 +17,7 @@ namespace TP_02_2018
             Console.SetWindowSize(Console.LargestWindowWidth / 2, Console.LargestWindowHeight - 2);
 
             // Nombre del alumno
-            Console.Title = "";
+            Console.Title = "Yamil Palmiero";
 
             Taller taller = new Taller(6);
 
@@ -46,34 +46,28 @@ namespace TP_02_2018
             Console.ReadKey();
             Console.Clear();
 
-            // Quito 2 items y muestro
+            // Quito al primer ciclomotor y muestro
             taller -= c1;
-            taller -= c2;
 
             Console.WriteLine(taller.ToString());
             Console.WriteLine("<-----------PRESIONE UNA TECLA PARA CONTINUAR----------->");
             Console.ReadKey();
             Console.Clear();
 
-            // Vuelvo a agregar c2
-            taller += c2;
-
             // Muestro solo Moto
-            Console.WriteLine(c2.Mostrar());
+            Console.WriteLine(taller.Listar(taller, Taller.ETipo.Ciclomotor));
             Console.WriteLine("<-----------PRESIONE UNA TECLA PARA CONTINUAR----------->");
             Console.ReadKey();
             Console.Clear();
 
             // Muestro solo Automovil
-            Console.WriteLine(m1.Mostrar());
-            Console.WriteLine(m2.Mostrar());
+            Console.WriteLine(taller.Listar(taller, Taller.ETipo.Sedan));
             Console.WriteLine("<-----------PRESIONE UNA TECLA PARA CONTINUAR----------->");
             Console.ReadKey();
             Console.Clear();
 
             // Muestro solo Camioneta
-            Console.WriteLine(a1.Mostrar());
-            Console.WriteLine(a2.Mostrar());
+            Console.WriteLine(taller.Listar(taller, Taller.ETipo.SUV));
             Console.WriteLine("<-------------PRESIONE UNA TECLA PARA SALIR------------->");
             Console.ReadKey();
         }
