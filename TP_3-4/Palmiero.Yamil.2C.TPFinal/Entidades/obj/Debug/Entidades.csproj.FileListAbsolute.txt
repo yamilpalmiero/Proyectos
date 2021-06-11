@@ -1,0 +1,2 @@
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Palmiero.Yamil.2C.TPFinal\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Palmiero.Yamil.2C.TPFinal\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
