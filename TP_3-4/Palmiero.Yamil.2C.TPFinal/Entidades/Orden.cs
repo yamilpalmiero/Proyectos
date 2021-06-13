@@ -19,116 +19,41 @@ namespace Entidades
         }
 
         /// <summary>
-        /// Carga los medicamentos que se necesitan producir
+        /// Propiedad que agrega un medicamento en la lista, si este no existe
         /// </summary>
-        /// <param name="medicamento">Medicamento a producir</param>
-        /// <param name="cantidad">Cantidad necesaria</param>
-        public void Cargar(string nombre, string codigo, int stock, float temperatura, Inyectable.EAplicacion aplicacion)
+        public static Medicamento Medicamento
         {
-            this.inyectables.Add(new Inyectable(nombre, codigo, stock, temperatura, aplicacion));
-        }
-        public void Cargar(string nombre, string codigo, int stock, int cantidad, Comprimido.ETipoVenta venta)
-        {
-            this.comprimidos.Add(new Comprimido(nombre, codigo, stock, cantidad, venta));
-        }
-
-        /// <summary>
-        /// Informa si el inyectable ya esta en la orden de produccion
-        /// </summary>
-        /// <param name="orden">Orden de produccion</param>
-        /// <param name="inyectable">Medicamento inyectable</param>
-        /// <returns>True si ya esta</returns>
-        public static bool operator ==(Orden orden, Inyectable inyectable)
-        {
-            bool retorno = false;
-
-            foreach (Inyectable item in orden.inyectables)
+            set
             {
-                if (item.Nombre.Equals(inyectable.Nombre))
+                if (medicamentos != value)
                 {
-                    retorno = true;
+                    medicamentos += value;
                 }
             }
-
-            return retorno;
         }
 
         /// <summary>
-        /// Informa si el inyectable no esta en la orden de produccion
+        /// Muestra la informacion completa del medicamento
         /// </summary>
-        /// <param name="orden">Orden de produccion</param>
-        /// <param name="inyectable">Medicamento inyectable</param>
-        /// <returns>True si no esta</returns>
-        public static bool operator !=(Orden orden, Inyectable inyectable)
+        /// <returns>Detalles del medicamento</returns>
+        public static string MostrarInformacion()
         {
-            return !(orden == inyectable);
-        }
+            StringBuilder sb = new StringBuilder();
 
-        /// <summary>
-        /// Informa si el inyectable ya esta en la orden de produccion
-        /// </summary>
-        /// <param name="orden">Orden de produccion</param>
-        /// <param name="comprimido">Medicamento tipo comprimido</param>
-        /// <returns>True si ya esta</returns>
-        public static bool operator ==(Orden orden, Comprimido comprimido)
-        {
-            bool retorno = false;
-
-            foreach (Comprimido item in orden.comprimidos)
+            foreach (Medicamento m in medicamentos)
             {
-                if (item.Nombre.Equals(comprimido.Nombre))
+                if (m is Inyectable)
                 {
-                    retorno = true;
+                    sb.AppendLine("INYECTABLE");
+                    sb.AppendLine(m.ToString());
+                }
+                else
+                {
+                    sb.AppendLine("COMPRIMIDO");
+                    sb.AppendLine(m.ToString());
                 }
             }
-
-            return retorno;
+            return sb.ToString();
         }
-
-        /// <summary>
-        /// Informa si el comprimido no esta en la orden de produccion
-        /// </summary>
-        /// <param name="orden">Orden de produccion</param>
-        /// <param name="comprimido">Medicamento tipo comprimido</param>
-        /// <returns>True si no esta</returns>
-        public static bool operator !=(Orden orden, Comprimido comprimido)
-        {
-            return !(orden == comprimido);
-        }
-
-        /// <summary>
-        /// Agrega un inyectable a la lista de inyectables de la orden de produccion
-        /// </summary>
-        /// <param name="orden">Orden de produccion</param>
-        /// <param name="inyectable">Medicamento inyectable</param>
-        /// <returns>Orden de produccion actualizada si pudo agregar el inyectable</returns>
-        public static Orden operator +(Orden orden, Inyectable inyectable)
-        {
-            if (orden != inyectable)
-            {
-                orden.inyectables.Add(inyectable);
-            }
-
-            return orden;
-        }
-
-        /// <summary>
-        /// Agrega un medicamento comprimido a la lista de comprimidos de la orden de produccion
-        /// </summary>
-        /// <param name="orden">Orden de produccion</param>
-        /// <param name="comprimido">Medicamento de tipo comprimido</param>
-        /// <returns>Orden de produccion actualizada si pudo agregar el comprimido</returns>
-        public static Orden operator +(Orden orden, Comprimido comprimido)
-        {
-            if (orden != comprimido)
-            {
-                orden.comprimidos.Add(comprimido);
-            }
-
-            return orden;
-        }
-
-
-
     }
 }

@@ -9,15 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using Entidades;
+using System.IO;
 
 namespace FrmOrdenProduccion
 {
     public partial class FrmPrincipal : Form
     {
         private DateTime fechaProduccion;
-        private Orden ordenProduccion = new Orden();
-        private Inyectable inyectable;
-        private Comprimido comprimido;
+        string escritorio = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
         public FrmPrincipal()
         {
@@ -42,14 +41,53 @@ namespace FrmOrdenProduccion
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
-            ordenProduccion.Cargar(cmbNombre.Text, txtCodigo.Text, 10, -25.5f, Inyectable.EAplicacion.Endovenosa);
-            MessageBox.Show("Carga exitosa", "Carga de medicamento", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (!(cmbTipo.SelectedItem is null))
+            {
+                if (cmbTipo.SelectedItem.ToString() == "Comprimido")
+                {
+                    Orden.Medicamento = new Comprimido(cmbNombre.SelectedItem.ToString(), txtCodigo.Text, 500, ((int)nudCantidad.Value), Comprimido.ETipoVenta.Recetado);
 
+                    MessageBox.Show("Carga exitosa", "COMPRIMIDO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    Orden.Medicamento = new Inyectable(cmbNombre.SelectedItem.ToString(), txtCodigo.Text, 200, 25.5f, Inyectable.EAplicacion.Intramuscular);
+                    MessageBox.Show("Carga exitosa", "INYECTABLE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
 
         private void btnMostrar_Click(object sender, EventArgs e)
         {
-            this.rtbOrden.Text = inyectable.ToString();
+            rtbOrden.Text = $"Fecha de Produccion {dtpFecha.Value.ToShortDateString()}\n\n" + Orden.MostrarInformacion();
+        }
+
+        private void btnEnviar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (StreamWriter sw = new StreamWriter(escritorio + @"\Orden de Produccion.txt"))
+                {
+                    sw.WriteLine($"Fecha de Produccion {dtpFecha.Value.ToShortDateString()}\n\n" + Orden.MostrarInformacion());
+                }
+                using (StreamReader sr = new StreamReader(escritorio + @"\Orden de Produccion.txt"))
+                {
+                    Console.WriteLine(sr.ReadToEnd());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                MessageBox.Show("Se envió la orden al escritorio", "ORDEN", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MessageBox.Show("¿Desea salir?", "SALIR", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
         }
     }
 }

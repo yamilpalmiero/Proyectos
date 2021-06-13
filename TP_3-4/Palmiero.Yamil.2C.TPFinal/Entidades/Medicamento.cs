@@ -99,12 +99,18 @@ namespace Entidades
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine($"Nombre: {this.Nombre}");
-            sb.AppendLine($"Codigo: {this.codigo}");
+            sb.Append($"Codigo: {this.codigo}");
 
             return sb.ToString();
         }
 
 
+        /// <summary>
+        /// Compara una lista de medicamentos con un medicamento para ver si esta
+        /// </summary>
+        /// <param name="medicamentos">Lista de medicamentos</param>
+        /// <param name="m">Medicamento</param>
+        /// <returns>Retorna true si existe el medicamento en la lista</returns>
         public static bool operator ==(List<Medicamento> medicamentos, Medicamento m)
         {
             bool retorno = false;
@@ -119,10 +125,25 @@ namespace Entidades
 
             return retorno;
         }
+
+        /// <summary>
+        /// Compara una lista de medicamentos con un medicamento para ver si no esta
+        /// </summary>
+        /// <param name="medicamentos">Lista de medicamentos</param>
+        /// <param name="m">Medicamento</param>
+        /// <returns>Retorna true si no esta</returns>
         public static bool operator !=(List<Medicamento> medicamentos, Medicamento m)
         {
             return !(medicamentos == m);
         }
+
+
+        /// <summary>
+        /// Agrega un medicamento a la lista
+        /// </summary>
+        /// <param name="medicamentos">Lista de medicamentos</param>
+        /// <param name="m">Medicamento que se quiere agregar</param>
+        /// <returns>La lista de medicamentos actualizada</returns>
         public static List<Medicamento> operator +(List<Medicamento> medicamentos, Medicamento m)
         {
             if (medicamentos != m)
