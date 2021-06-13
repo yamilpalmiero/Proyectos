@@ -76,7 +76,8 @@ namespace Entidades
 
             sb.AppendLine(base.ToString());
             sb.AppendLine($"Fecha de vencimiento: {DateTime.Now.AddMonths(20).ToShortDateString()}");
-            sb.AppendLine($"Cantidad por blister: {this.CantidadBlister.ToString()}");
+            sb.AppendLine($"Cantidad: {this.CantidadBlister.ToString()}");
+            sb.AppendLine($"Blisters (2 unidades): {(this.CantidadBlister/2).ToString()}");
             sb.AppendLine($"Distribucion: {this.TipoVenta}");
 
             return sb.ToString();

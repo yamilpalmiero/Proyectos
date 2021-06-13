@@ -51,7 +51,7 @@ namespace FrmOrdenProduccion
                 }
                 else
                 {
-                    Orden.Medicamento = new Inyectable(cmbNombre.SelectedItem.ToString(), txtCodigo.Text, 200, 25.5f, Inyectable.EAplicacion.Intramuscular);
+                    Orden.Medicamento = new Inyectable(cmbNombre.SelectedItem.ToString(), txtCodigo.Text, 200, ((int)nudCantidad.Value), 25.5f, Inyectable.EAplicacion.Intramuscular);
                     MessageBox.Show("Carga exitosa", "INYECTABLE", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -87,7 +87,12 @@ namespace FrmOrdenProduccion
 
         private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            MessageBox.Show("¿Desea salir?", "SALIR", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (MessageBox.Show("¿Seguro de querer salir?", "Salir",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }
