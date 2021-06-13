@@ -1,0 +1,13 @@
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Palmiero.Yamil.2C.TPFinal\FrmOrdenProduccion\bin\Debug\FrmOrdenProduccion.exe.config
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Palmiero.Yamil.2C.TPFinal\FrmOrdenProduccion\bin\Debug\FrmOrdenProduccion.exe
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Palmiero.Yamil.2C.TPFinal\FrmOrdenProduccion\bin\Debug\FrmOrdenProduccion.pdb
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Palmiero.Yamil.2C.TPFinal\FrmOrdenProduccion\obj\Debug\FrmOrdenProduccion.csproj.AssemblyReference.cache
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Palmiero.Yamil.2C.TPFinal\FrmOrdenProduccion\obj\Debug\FrmOrdenProduccion.FrmPrincipal.resources
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Palmiero.Yamil.2C.TPFinal\FrmOrdenProduccion\obj\Debug\FrmOrdenProduccion.Properties.Resources.resources
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Palmiero.Yamil.2C.TPFinal\FrmOrdenProduccion\obj\Debug\FrmOrdenProduccion.csproj.GenerateResource.cache
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Palmiero.Yamil.2C.TPFinal\FrmOrdenProduccion\obj\Debug\FrmOrdenProduccion.csproj.CoreCompileInputs.cache
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Palmiero.Yamil.2C.TPFinal\FrmOrdenProduccion\obj\Debug\FrmOrdenProduccion.exe
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Palmiero.Yamil.2C.TPFinal\FrmOrdenProduccion\obj\Debug\FrmOrdenProduccion.pdb
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Palmiero.Yamil.2C.TPFinal\FrmOrdenProduccion\bin\Debug\Entidades.dll
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Palmiero.Yamil.2C.TPFinal\FrmOrdenProduccion\bin\Debug\Entidades.pdb
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Palmiero.Yamil.2C.TPFinal\FrmOrdenProduccion\obj\Debug\FrmOrdenProduccion.csproj.CopyComplete

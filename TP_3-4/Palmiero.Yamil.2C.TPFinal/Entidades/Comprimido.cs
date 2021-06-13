@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public sealed class Comprimido : Medicamento
+    public sealed class Comprimido : Medicamento, IDatos<Comprimido>
     {
+        /// <summary>
+        /// Enumerado para las posibles formas de venta del medicamento
+        /// </summary>
         public enum ETipoVenta
         {
             VentaLibre,
@@ -17,23 +20,75 @@ namespace Entidades
         private int cantidadPorBlister;
         private ETipoVenta tipoVenta;
 
-        public Comprimido(string nombre, string codigo,int stock, DateTime fechaVencimiento, int cantidad, ETipoVenta tipo)
+        /// <summary>
+        /// Crea un nuevo medicamento en pastillas
+        /// </summary>
+        /// <param name="nombre">Nombre del medicamento</param>
+        /// <param name="codigo">Cpdigo del medicamento</param>
+        /// <param name="stock">Cantidad en stock de ese medicamento</param>
+        /// <param name="cantidad">Cantidad de comprimidos que entran por blister</param>
+        /// <param name="tipo">Manera en la cual se vende al publico</param>
+        public Comprimido(string nombre, string codigo, int stock, int cantidad, ETipoVenta tipo)
             : base(nombre, codigo, stock)
         {
             this.cantidadPorBlister = cantidad;
             this.tipoVenta = tipo;
         }
 
-        public override string ToString()
+        /// <summary>
+        /// Propiedad de lectura y escritura para la cantidad por blister
+        /// </summary>
+        public int CantidadBlister
+        {
+            get
+            {
+                return this.cantidadPorBlister;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    this.cantidadPorBlister = value;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Propiedad de solo elctura del tipo de venta
+        /// </summary>
+        public string TipoVenta
+        {
+            get
+            {
+                return this.tipoVenta.ToString();
+            }
+        }
+
+
+        /// <summary>
+        /// Muestra la información del medicamento
+        /// </summary>
+        /// <param name="item">Medicamento a mostrar</param>
+        /// <returns>String con la informacion del medicamento</returns>
+        public string MostrarDatosMedicamento(IDatos<Comprimido> item)
         {
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine(base.ToString());
-            sb.AppendLine($"Fecha de vencimiento: {this.FechaVencimiento.AddMonths(12).ToShortDateString()}");
-            sb.AppendLine($"Cantidad por blister: {this.cantidadPorBlister.ToString()}");
-            sb.AppendLine($"Distribucion: {this.tipoVenta.ToString()}");
+            sb.AppendLine($"Fecha de vencimiento: {DateTime.Now.AddMonths(20).ToShortDateString()}");
+            sb.AppendLine($"Cantidad por blister: {this.CantidadBlister.ToString()}");
+            sb.AppendLine($"Distribucion: {this.TipoVenta}");
 
             return sb.ToString();
+        }
+
+        /// <summary>
+        /// Polimorfismo del ToString.
+        /// </summary>
+        /// <returns>String con la informacion del medicamento</returns>
+        public override string ToString()
+        {
+            return MostrarDatosMedicamento(this);
         }
     }
 }

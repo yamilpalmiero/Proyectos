@@ -29,75 +29,70 @@ namespace FrmOrdenProduccion
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblFecha = new System.Windows.Forms.Label();
+            this.lblFechaProduccion = new System.Windows.Forms.Label();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.lblTipo = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.nudCantidad = new System.Windows.Forms.NumericUpDown();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCargar = new System.Windows.Forms.Button();
+            this.rtbOrden = new System.Windows.Forms.RichTextBox();
+            this.btnEnviar = new System.Windows.Forms.Button();
+            this.btnMostrar = new System.Windows.Forms.Button();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.cmbNombre = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblFecha
+            // lblFechaProduccion
             // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(39, 24);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(47, 17);
-            this.lblFecha.TabIndex = 0;
-            this.lblFecha.Text = "Fecha";
+            this.lblFechaProduccion.AutoSize = true;
+            this.lblFechaProduccion.Location = new System.Drawing.Point(36, 86);
+            this.lblFechaProduccion.Name = "lblFechaProduccion";
+            this.lblFechaProduccion.Size = new System.Drawing.Size(85, 17);
+            this.lblFechaProduccion.TabIndex = 0;
+            this.lblFechaProduccion.Text = "Fecha Prod.";
             // 
             // dtpFecha
             // 
-            this.dtpFecha.Location = new System.Drawing.Point(92, 19);
+            this.dtpFecha.Location = new System.Drawing.Point(127, 81);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(200, 22);
+            this.dtpFecha.Size = new System.Drawing.Size(165, 22);
             this.dtpFecha.TabIndex = 1;
             // 
             // lblTipo
             // 
             this.lblTipo.AutoSize = true;
-            this.lblTipo.Location = new System.Drawing.Point(39, 103);
+            this.lblTipo.Location = new System.Drawing.Point(36, 124);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(36, 17);
             this.lblTipo.TabIndex = 2;
             this.lblTipo.Text = "Tipo";
             // 
-            // comboBox1
+            // cmbTipo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(123, 103);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(169, 24);
-            this.comboBox1.TabIndex = 3;
+            this.cmbTipo.FormattingEnabled = true;
+            this.cmbTipo.Location = new System.Drawing.Point(127, 124);
+            this.cmbTipo.Name = "cmbTipo";
+            this.cmbTipo.Size = new System.Drawing.Size(165, 24);
+            this.cmbTipo.TabIndex = 3;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(39, 175);
+            this.lblNombre.Location = new System.Drawing.Point(39, 168);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(58, 17);
             this.lblNombre.TabIndex = 4;
             this.lblNombre.Text = "Nombre";
             // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(123, 175);
-            this.txtNombre.Multiline = true;
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(169, 28);
-            this.txtNombre.TabIndex = 5;
-            // 
             // lblCantidad
             // 
             this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Location = new System.Drawing.Point(42, 254);
+            this.lblCantidad.Location = new System.Drawing.Point(39, 263);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(64, 17);
             this.lblCantidad.TabIndex = 6;
@@ -105,67 +100,108 @@ namespace FrmOrdenProduccion
             // 
             // nudCantidad
             // 
-            this.nudCantidad.Location = new System.Drawing.Point(123, 254);
+            this.nudCantidad.Location = new System.Drawing.Point(127, 263);
             this.nudCantidad.Name = "nudCantidad";
-            this.nudCantidad.Size = new System.Drawing.Size(169, 22);
+            this.nudCantidad.Size = new System.Drawing.Size(165, 22);
             this.nudCantidad.TabIndex = 7;
             // 
-            // btnAgregar
+            // btnCargar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(42, 336);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(250, 74);
-            this.btnAgregar.TabIndex = 8;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnCargar.Location = new System.Drawing.Point(42, 336);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(250, 74);
+            this.btnCargar.TabIndex = 8;
+            this.btnCargar.Text = "Cargar";
+            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
-            // richTextBox1
+            // rtbOrden
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(352, 19);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(394, 391);
-            this.richTextBox1.TabIndex = 9;
-            this.richTextBox1.Text = "";
+            this.rtbOrden.Location = new System.Drawing.Point(352, 19);
+            this.rtbOrden.Name = "rtbOrden";
+            this.rtbOrden.Size = new System.Drawing.Size(394, 391);
+            this.rtbOrden.TabIndex = 9;
+            this.rtbOrden.Text = "";
             // 
-            // btnCancelar
+            // btnEnviar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(352, 450);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(190, 59);
-            this.btnCancelar.TabIndex = 10;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnEnviar.Location = new System.Drawing.Point(352, 435);
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.Size = new System.Drawing.Size(394, 74);
+            this.btnEnviar.TabIndex = 11;
+            this.btnEnviar.Text = "ENVIAR -->";
+            this.btnEnviar.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnMostrar
             // 
-            this.button2.Location = new System.Drawing.Point(556, 450);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(190, 59);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnMostrar.Location = new System.Drawing.Point(42, 435);
+            this.btnMostrar.Name = "btnMostrar";
+            this.btnMostrar.Size = new System.Drawing.Size(250, 74);
+            this.btnMostrar.TabIndex = 12;
+            this.btnMostrar.Text = "Mostrar cargas";
+            this.btnMostrar.UseVisualStyleBackColor = true;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Location = new System.Drawing.Point(34, 19);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(72, 25);
+            this.lblFecha.TabIndex = 13;
+            this.lblFecha.Text = "Fecha";
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Location = new System.Drawing.Point(42, 216);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(52, 17);
+            this.lblCodigo.TabIndex = 14;
+            this.lblCodigo.Text = "Codigo";
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(127, 216);
+            this.txtCodigo.Multiline = true;
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(165, 27);
+            this.txtCodigo.TabIndex = 15;
+            // 
+            // cmbNombre
+            // 
+            this.cmbNombre.FormattingEnabled = true;
+            this.cmbNombre.Location = new System.Drawing.Point(127, 168);
+            this.cmbNombre.Name = "cmbNombre";
+            this.cmbNombre.Size = new System.Drawing.Size(165, 24);
+            this.cmbNombre.TabIndex = 16;
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 555);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.cmbNombre);
+            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.lblCodigo);
+            this.Controls.Add(this.lblFecha);
+            this.Controls.Add(this.btnMostrar);
+            this.Controls.Add(this.btnEnviar);
+            this.Controls.Add(this.rtbOrden);
+            this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.nudCantidad);
             this.Controls.Add(this.lblCantidad);
-            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbTipo);
             this.Controls.Add(this.lblTipo);
             this.Controls.Add(this.dtpFecha);
-            this.Controls.Add(this.lblFecha);
+            this.Controls.Add(this.lblFechaProduccion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Orden de Produccion";
+            this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -174,18 +210,21 @@ namespace FrmOrdenProduccion
 
         #endregion
 
-        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label lblFechaProduccion;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Label lblTipo;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbTipo;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.NumericUpDown nudCantidad;
-        private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCargar;
+        private System.Windows.Forms.RichTextBox rtbOrden;
+        private System.Windows.Forms.Button btnEnviar;
+        private System.Windows.Forms.Button btnMostrar;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.ComboBox cmbNombre;
     }
 }
 
