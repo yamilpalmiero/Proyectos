@@ -41,9 +41,8 @@ namespace FrmOrdenProduccion
             this.btnEnviar = new System.Windows.Forms.Button();
             this.btnMostrar = new System.Windows.Forms.Button();
             this.lblFecha = new System.Windows.Forms.Label();
-            this.lblCodigo = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.cmbNombre = new System.Windows.Forms.ComboBox();
+            this.btnImportar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +65,7 @@ namespace FrmOrdenProduccion
             // lblTipo
             // 
             this.lblTipo.AutoSize = true;
-            this.lblTipo.Location = new System.Drawing.Point(36, 124);
+            this.lblTipo.Location = new System.Drawing.Point(36, 144);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(36, 17);
             this.lblTipo.TabIndex = 2;
@@ -74,8 +73,9 @@ namespace FrmOrdenProduccion
             // 
             // cmbTipo
             // 
+            this.cmbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipo.FormattingEnabled = true;
-            this.cmbTipo.Location = new System.Drawing.Point(127, 124);
+            this.cmbTipo.Location = new System.Drawing.Point(127, 144);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(165, 24);
             this.cmbTipo.TabIndex = 3;
@@ -83,7 +83,7 @@ namespace FrmOrdenProduccion
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(39, 168);
+            this.lblNombre.Location = new System.Drawing.Point(39, 198);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(58, 17);
             this.lblNombre.TabIndex = 4;
@@ -92,7 +92,7 @@ namespace FrmOrdenProduccion
             // lblCantidad
             // 
             this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Location = new System.Drawing.Point(39, 263);
+            this.lblCantidad.Location = new System.Drawing.Point(39, 257);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(64, 17);
             this.lblCantidad.TabIndex = 6;
@@ -100,16 +100,16 @@ namespace FrmOrdenProduccion
             // 
             // nudCantidad
             // 
-            this.nudCantidad.Location = new System.Drawing.Point(127, 263);
+            this.nudCantidad.Location = new System.Drawing.Point(127, 252);
             this.nudCantidad.Name = "nudCantidad";
             this.nudCantidad.Size = new System.Drawing.Size(165, 22);
             this.nudCantidad.TabIndex = 7;
             // 
             // btnCargar
             // 
-            this.btnCargar.Location = new System.Drawing.Point(42, 336);
+            this.btnCargar.Location = new System.Drawing.Point(42, 320);
             this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(250, 74);
+            this.btnCargar.Size = new System.Drawing.Size(250, 51);
             this.btnCargar.TabIndex = 8;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
@@ -135,9 +135,9 @@ namespace FrmOrdenProduccion
             // 
             // btnMostrar
             // 
-            this.btnMostrar.Location = new System.Drawing.Point(42, 435);
+            this.btnMostrar.Location = new System.Drawing.Point(42, 390);
             this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(250, 74);
+            this.btnMostrar.Size = new System.Drawing.Size(250, 51);
             this.btnMostrar.TabIndex = 12;
             this.btnMostrar.Text = "Mostrar cargas";
             this.btnMostrar.UseVisualStyleBackColor = true;
@@ -146,46 +146,39 @@ namespace FrmOrdenProduccion
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(34, 19);
+            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Location = new System.Drawing.Point(33, 19);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(72, 25);
+            this.lblFecha.Size = new System.Drawing.Size(102, 36);
             this.lblFecha.TabIndex = 13;
             this.lblFecha.Text = "Fecha";
             // 
-            // lblCodigo
-            // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(42, 216);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(52, 17);
-            this.lblCodigo.TabIndex = 14;
-            this.lblCodigo.Text = "Codigo";
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Location = new System.Drawing.Point(127, 216);
-            this.txtCodigo.Multiline = true;
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(165, 27);
-            this.txtCodigo.TabIndex = 15;
-            // 
             // cmbNombre
             // 
+            this.cmbNombre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNombre.FormattingEnabled = true;
-            this.cmbNombre.Location = new System.Drawing.Point(127, 168);
+            this.cmbNombre.Location = new System.Drawing.Point(127, 198);
             this.cmbNombre.Name = "cmbNombre";
             this.cmbNombre.Size = new System.Drawing.Size(165, 24);
             this.cmbNombre.TabIndex = 16;
+            // 
+            // btnImportar
+            // 
+            this.btnImportar.Location = new System.Drawing.Point(39, 458);
+            this.btnImportar.Name = "btnImportar";
+            this.btnImportar.Size = new System.Drawing.Size(250, 51);
+            this.btnImportar.TabIndex = 17;
+            this.btnImportar.Text = "Importar";
+            this.btnImportar.UseVisualStyleBackColor = true;
+            this.btnImportar.Click += new System.EventHandler(this.btnImportar_Click);
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 555);
+            this.Controls.Add(this.btnImportar);
             this.Controls.Add(this.cmbNombre);
-            this.Controls.Add(this.txtCodigo);
-            this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.btnEnviar);
@@ -224,9 +217,8 @@ namespace FrmOrdenProduccion
         private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.Label lblCodigo;
-        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.ComboBox cmbNombre;
+        private System.Windows.Forms.Button btnImportar;
     }
 }
 

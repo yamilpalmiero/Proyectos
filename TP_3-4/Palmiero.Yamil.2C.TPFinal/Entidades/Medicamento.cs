@@ -6,11 +6,19 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public abstract class Medicamento
+    public class Medicamento
     {
         private string nombre;
-        private string codigo;
         private int stock;
+
+
+        /// <summary>
+        /// Constructor por defecto de Medicamento
+        /// </summary>
+        public Medicamento()
+        {
+
+        }
 
         /// <summary>
         /// Crea un nuevo medicamento
@@ -18,10 +26,9 @@ namespace Entidades
         /// <param name="nombre">Nombre del medicamento</param>
         /// <param name="codigo">Codigo del medicamento</param>
         /// <param name="stock">Cantidad en stock que hay de ese medicamento</param>
-        protected Medicamento(string nombre, string codigo, int stock)
+        protected Medicamento(string nombre, int stock)
         {
             this.nombre = nombre;
-            this.codigo = codigo;
             this.stock = stock;
         }
 
@@ -35,25 +42,7 @@ namespace Entidades
                 return this.nombre;
             }
         }
-
-        /// <summary>
-        /// Propiedad de lectura y escritura para el codigo
-        /// </summary>
-        public string Codigo
-        {
-            get
-            {
-                return this.codigo;
-            }
-            set
-            {
-                if (Validar(value))
-                {
-                    this.codigo = value;
-                }
-            }
-        }
-
+        
 
         /// <summary>
         /// Propiedad de lectura y escritura para la cantidad de stock
@@ -98,8 +87,7 @@ namespace Entidades
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine($"Nombre: {this.Nombre}");
-            sb.Append($"Codigo: {this.codigo}");
+            sb.Append($"Nombre: {this.Nombre}");
 
             return sb.ToString();
         }

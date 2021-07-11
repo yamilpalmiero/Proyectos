@@ -16,7 +16,7 @@ namespace Test_Unitarios
             Inyectable inyectable;
 
             //ACT
-            inyectable = new Inyectable("Corticoides", "QWERTY", 50, -25.5f, Inyectable.EAplicacion.Intramuscular);
+            inyectable = new Inyectable("Corticoides", 50, 500, -25.5f, Inyectable.EAplicacion.Intramuscular);
 
             //ASSERT
             Assert.IsNotNull(inyectable);
@@ -30,7 +30,7 @@ namespace Test_Unitarios
             string nombre = "Sputnik V";
 
             //ACT
-            inyectable = new Inyectable(nombre, "QWERTY", 50, -25.5f, Inyectable.EAplicacion.Endovenosa);
+            inyectable = new Inyectable(nombre, 50, 500, -25.5f, Inyectable.EAplicacion.Endovenosa);
 
             //ASSERT 
             Assert.AreEqual(nombre, inyectable.Nombre);

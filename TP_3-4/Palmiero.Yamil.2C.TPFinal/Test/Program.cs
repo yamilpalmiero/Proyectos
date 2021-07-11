@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 using Entidades;
 
-namespace Test
+namespace TestConsola
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Medicamento[] medicamentos =
-            {
-                new Comprimido("Omeprazol", "DASDA", 2500, 14, Comprimido.ETipoVenta.Recetado),
-                new Comprimido("Ibuprofeno", "RWREWR", 500, 10, Comprimido.ETipoVenta.VentaLibre),
-                new Comprimido("Paracetamol", "JTJYTJ", 650, 20, Comprimido.ETipoVenta.VentaLibre),
-                new Inyectable("Corticoides", "QWSDF", 200, -65.5f, Inyectable.EAplicacion.Endovenosa),
-                new Inyectable("Buscapina", "ASDGFH", 100, -05.8f, Inyectable.EAplicacion.Intramuscular)
-            };
+            List<Medicamento> medicamentos = new List<Medicamento>();
+
+            medicamentos.Add(new Comprimido("Omeprazol", 2500, 14, Comprimido.ETipoVenta.Recetado));
+            medicamentos.Add(new Comprimido("Ibuprofeno", 500, 10, Comprimido.ETipoVenta.VentaLibre));
+            medicamentos.Add(new Comprimido("Paracetamol", 650, 20, Comprimido.ETipoVenta.VentaLibre));
+            medicamentos.Add(new Inyectable("Corticoides", 200, 50, -65.5f, Inyectable.EAplicacion.Endovenosa));
+            medicamentos.Add(new Inyectable("Buscapina", 100, 25, -05.8f, Inyectable.EAplicacion.Intramuscular));
+
 
             foreach (Medicamento item in medicamentos)
             {
@@ -39,4 +39,5 @@ namespace Test
         }
     }
 }
+
 

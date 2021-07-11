@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="ArchivosException.cs" />
     <Compile Include="CodigoRepetidoException.cs" />
+    <Compile Include="FechaInvalidaException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

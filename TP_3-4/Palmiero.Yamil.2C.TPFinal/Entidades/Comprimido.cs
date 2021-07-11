@@ -20,6 +20,15 @@ namespace Entidades
         private int cantidadPorBlister;
         private ETipoVenta tipoVenta;
 
+
+        /// <summary>
+        /// Constructor por defecto del Comprimido
+        /// </summary>
+        public Comprimido()
+        {
+
+        }
+
         /// <summary>
         /// Crea un nuevo medicamento en pastillas
         /// </summary>
@@ -28,8 +37,8 @@ namespace Entidades
         /// <param name="stock">Cantidad en stock de ese medicamento</param>
         /// <param name="cantidad">Cantidad de comprimidos que entran por blister</param>
         /// <param name="tipo">Manera en la cual se vende al publico</param>
-        public Comprimido(string nombre, string codigo, int stock, int cantidad, ETipoVenta tipo)
-            : base(nombre, codigo, stock)
+        public Comprimido(string nombre, int stock, int cantidad, ETipoVenta tipo)
+            : base(nombre, stock)
         {
             this.cantidadPorBlister = cantidad;
             this.tipoVenta = tipo;

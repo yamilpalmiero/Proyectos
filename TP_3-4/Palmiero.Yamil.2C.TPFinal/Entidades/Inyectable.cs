@@ -21,6 +21,15 @@ namespace Entidades
         private int cantidad;
         private EAplicacion aplicacion;
 
+
+        /// <summary>
+        /// Constructor por defecto del Inyectable
+        /// </summary>
+        public Inyectable()
+        {
+
+        }
+
         /// <summary>
         /// Crea un nuevo medicamento inyectable
         /// </summary>
@@ -29,8 +38,8 @@ namespace Entidades
         /// <param name="stock">Cantidad en stock de ese medicamento</param>
         /// <param name="temperatura">Temperatura a la cual conservar el farmaco</param>
         /// <param name="aplicacion">Tipo de aplicacion</param>
-        public Inyectable(string nombre, string codigo, int stock, int cantidad, float temperatura, EAplicacion aplicacion)
-            : base(nombre, codigo, stock)
+        public Inyectable(string nombre, int stock, int cantidad, float temperatura, EAplicacion aplicacion)
+            : base(nombre, stock)
         {
             this.temperaturaConservacion = temperatura;
             this.cantidad = cantidad;

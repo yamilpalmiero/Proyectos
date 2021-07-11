@@ -42,15 +42,22 @@ namespace Entidades
 
             foreach (Medicamento m in medicamentos)
             {
-                if (m is Inyectable)
+                try
                 {
-                    sb.AppendLine("INYECTABLE");
-                    sb.AppendLine(m.ToString());
+                    if (m is Inyectable)
+                    {
+                        sb.AppendLine("INYECTABLE");
+                        sb.AppendLine(m.ToString());
+                    }
+                    else
+                    {
+                        sb.AppendLine("COMPRIMIDO");
+                        sb.AppendLine(m.ToString());
+                    }
                 }
-                else
+                catch (Exception e)
                 {
-                    sb.AppendLine("COMPRIMIDO");
-                    sb.AppendLine(m.ToString());
+                    Console.WriteLine(e.Message);
                 }
             }
             return sb.ToString();

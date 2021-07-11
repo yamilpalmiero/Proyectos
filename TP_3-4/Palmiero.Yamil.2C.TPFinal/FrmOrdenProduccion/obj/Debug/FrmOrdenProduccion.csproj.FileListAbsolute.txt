@@ -11,3 +11,5 @@ E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Palmiero.Yamil.2C.TPFinal\FrmO
 E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Palmiero.Yamil.2C.TPFinal\FrmOrdenProduccion\bin\Debug\Entidades.dll
 E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Palmiero.Yamil.2C.TPFinal\FrmOrdenProduccion\bin\Debug\Entidades.pdb
 E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Palmiero.Yamil.2C.TPFinal\FrmOrdenProduccion\obj\Debug\FrmOrdenProduccion.csproj.CopyComplete
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Palmiero.Yamil.2C.TPFinal\FrmOrdenProduccion\bin\Debug\Excepciones.dll
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Palmiero.Yamil.2C.TPFinal\FrmOrdenProduccion\bin\Debug\Excepciones.pdb
