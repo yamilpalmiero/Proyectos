@@ -1,0 +1,13 @@
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Yamil.Palmiero.2C.TPFinal\ConsolaTest\bin\Debug\ConsolaTest.exe.config
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Yamil.Palmiero.2C.TPFinal\ConsolaTest\bin\Debug\ConsolaTest.exe
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Yamil.Palmiero.2C.TPFinal\ConsolaTest\bin\Debug\ConsolaTest.pdb
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Yamil.Palmiero.2C.TPFinal\ConsolaTest\bin\Debug\Entidades.dll
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Yamil.Palmiero.2C.TPFinal\ConsolaTest\bin\Debug\Yamil.Palmiero.2C.TPFinal.exe
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Yamil.Palmiero.2C.TPFinal\ConsolaTest\bin\Debug\Entidades.pdb
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Yamil.Palmiero.2C.TPFinal\ConsolaTest\bin\Debug\Yamil.Palmiero.2C.TPFinal.pdb
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Yamil.Palmiero.2C.TPFinal\ConsolaTest\bin\Debug\Yamil.Palmiero.2C.TPFinal.exe.config
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Yamil.Palmiero.2C.TPFinal\ConsolaTest\obj\Debug\ConsolaTest.csproj.AssemblyReference.cache
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Yamil.Palmiero.2C.TPFinal\ConsolaTest\obj\Debug\ConsolaTest.csproj.CoreCompileInputs.cache
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Yamil.Palmiero.2C.TPFinal\ConsolaTest\obj\Debug\ConsolaTest.csproj.CopyComplete
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Yamil.Palmiero.2C.TPFinal\ConsolaTest\obj\Debug\ConsolaTest.exe
+E:\Facultad\Programacion-Laboratorio_2\TPs\TP_3-4\Yamil.Palmiero.2C.TPFinal\ConsolaTest\obj\Debug\ConsolaTest.pdb
